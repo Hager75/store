@@ -1,0 +1,19 @@
+@import '../../../_varribles.scss';
+nav{
+    background-color: $mainColor;
+    color: $darkColor;
+    .logo {
+        max-width: 75px;
+    }
+    .nav-link , .nav-link:active , .nav-link:visited {
+      color: $darkColor;
+      text-decoration: none;  
+      font-weight: 600;
+    }
+    .count_no{
+      position: absolute;
+      
+    }
+}
+
+
