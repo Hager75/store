@@ -1,17 +1,17 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { CounterCartContext } from '../../../store/CounterCartContext';
+import { AppContext } from '../../../store/AppContext';
 import './Header.scss'
 
 export default function Header() {
     // const [userName, setUserName] = useState('hager');
     const userName = 'Hager';
-    let {count} = useContext(CounterCartContext);
+    let {count} = useContext(AppContext);
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light p-0 mb-3">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/products">
+                    <Link className="navbar-brand" to="/">
                         <img src="./assets/logo.png" alt="logo" className="logo" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@ export default function Header() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                         <div className='d-flex justify-content-between'>
-                            <Link className="nav-link" to="/products">
+                            <Link className="nav-link" to="/">
                                 Home
                             </Link>
 

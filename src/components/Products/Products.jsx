@@ -1,17 +1,14 @@
-import React, { useContext } from 'react'
-import { OrderListContextProvider } from '../../store/OrderListContext';
-import { ProductsContext } from '../../store/ProductsContext';
+import { useContext } from 'react'
+import { AppContext } from '../../store/AppContext';
+
 import Product from '../Product/Product'
 
 export default function Products() {
-  let {products} = useContext(ProductsContext);
+  let { data } = useContext(AppContext);
   
   return (
     <div className='row'> 
-    <OrderListContextProvider>
-
-      {products.map((product)=><Product productInfo={product} key={product.id}/>)}
-    </OrderListContextProvider>
+          {data.products.map((product)=><Product productInfo={product} key={product.id}/>)}
     </div>
   )
 }
